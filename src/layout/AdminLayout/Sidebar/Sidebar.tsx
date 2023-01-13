@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { Button } from 'react-bootstrap'
 import SidebarNav from './SidebarNav'
+import MoneyGoLogo from './Moneygo-logowhite.png'
+import Image from 'next/image'
 
 export default function Sidebar(props: { isShow: boolean; isShowMd: boolean }) {
   const { isShow, isShowMd } = props
@@ -32,7 +34,9 @@ export default function Sidebar(props: { isShow: boolean; isShowMd: boolean }) {
       id="sidebar"
     >
       <div className="sidebar-brand d-none d-md-flex align-items-center justify-content-center">
-        <svg
+       
+       <Image src={MoneyGoLogo} width={190}/>
+       {/* <svg
           className="sidebar-brand-full"
           width="118"
           height="46"
@@ -47,7 +51,7 @@ export default function Sidebar(props: { isShow: boolean; isShowMd: boolean }) {
         >
           <title>CoreUI Logo</title>
           <use xlinkHref="/assets/brand/coreui.svg#signet" />
-        </svg>
+        </svg> */}
       </div>
 
       <div className="sidebar-nav flex-fill">
